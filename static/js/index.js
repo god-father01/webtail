@@ -57,8 +57,8 @@ function mainController($rootScope, $scope, $mdSidenav, $http) {
     socket.onmessage = function (e) {
       container.append(e.data.trim() + "<br>");
 
-       // On update of document scroll to bottom
-       window.scrollTo(0,document.body.scrollHeight);
+      //  // On update of document scroll to bottom
+      //  window.scrollTo(0,document.body.scrollHeight);
     }
     socket.onclose = function () {
       container.append("<p>Connection Closed to WebSocket, tail stopped</p>");

@@ -123,19 +123,14 @@
       var evObj = document.createEvent('Events');
       evObj.initEvent(etype, true, false);
       el.dispatchEvent(evObj);
-     
-  
     }
   }
 
   document.addEventListener("DOMContentLoaded", function(){
     eventFire(document.getElementById('open'), 'click');
   });
-window.scrollTo(0,document.body.scrollHeight);
-        var autoScroll = window.setInterval(function() {
-    var $target = $('html,body'); 
-    $target.animate({scrollTop: $target.height()}, 1000);
-}, 500);
+
+  
   </script>
   <style type="text/css">
    
@@ -145,3 +140,8 @@ window.scrollTo(0,document.body.scrollHeight);
   </style>
 </html>
 << end >>
+ {# window.scrollTo(0,document.body.scrollHeight);
+        var autoScroll = window.setInterval(function() {
+    var $target = $('html,body'); 
+    $target.animate({scrollTop: $target.height()}, 1000);
+  }, 500); #}
