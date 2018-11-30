@@ -1,0 +1,103 @@
+body {
+    background: #111;
+    font-family: monospace;
+    /* height: 100%; */
+}
+
+md-content {
+    background: #111;
+    color: whitesmoke;
+}
+
+md-input-container:not(.md-input-invalid).md-input-has-value label {
+    color: whitesmoke;
+}
+
+md-sidenav {
+    display: none;
+    width: 0px;
+}
+
+md-toolbar {
+    display: none;
+
+}
+
+md-input-container{
+    display: none;
+}
+
+md-backdrop{
+    display: none;
+}
+
+@media (min-width: 960px)
+{
+.md-padding {
+    padding: 0px;
+}
+}
+
+.md-padding {
+    padding: 0px;
+}
+
+.layout-padding{
+    padding: 0px;
+}
+
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 14px;
+    color: white;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+  
+  @keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: white;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: white;
+    }
+  }
+  
+  @-webkit-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: white;
+    }
+  }
+  
+  @-ms-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: white;
+    }
+  }
+  
+  @-o-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: white;
+    }
+  }

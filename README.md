@@ -151,17 +151,9 @@ You can say something like `5h` or `1d` or `100h` or `4d`. Zero prefixed time in
 **Note**: By default cron is not enabled and will not re-index files.
 
 ### Screenshots
-Login
-![N|Solid](https://raw.githubusercontent.com/prateeknischal/webtail/master/screenshots/webtail_login.png)
-
-Dashboard
-![N|Solid](https://raw.githubusercontent.com/prateeknischal/webtail/master/screenshots/webtail_dashboard.png)
-
-SideNav
-![N|Solid](https://raw.githubusercontent.com/prateeknischal/webtail/master/screenshots/webtail_filenav.png)
 
 Tail
-![N|Solid](https://raw.githubusercontent.com/prateeknischal/webtail/master/screenshots/webtail_tail.png)
+![N|Solid](https://i.ibb.co/BCC9DLN/Screenshot-from-2018-11-30-22-00-13.png)
 
 #### TODOs
 * ~~Add https support~~
