@@ -53,6 +53,7 @@ function mainController($rootScope, $scope, $mdSidenav, $http) {
     container.html("")
     socket.onopen = function () {
       container.append("<p><b>Tailing file: " + file + "</b></p>");
+      title.append("Tailing file: " + file);
     };
     socket.onmessage = function (e) {
       container.append(e.data.trim() + "<br>");
