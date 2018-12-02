@@ -1,7 +1,7 @@
 << define "index" >>
 <html>
   <head>
-    <title id="title"></title>
+    <title>Webtail</title>
     <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no" >
     <meta name="csrf_token" content="<<.token>>">
     <link rel="stylesheet" href="/css/angular-material.min.css">
@@ -32,20 +32,23 @@
         </div>
       </md-toolbar>
       <md-content flex layout-padding layout="column">
-       <md-input-container>
-<label>Font Size</label>
-<md-select ng-model="currSize">
-  <md-option ng-repeat="size in mc.fontSize" ng-value="size">
-    {{size}}
-  </md-option>
-</md-select>
-</md-input-container>
+        <md-content flex>
+          <md-input-container>
+            <label>Font Size</label>
+            <md-select ng-model="currSize">
+              <md-option ng-repeat="size in mc.fontSize" ng-value="size">
+                {{size}}
+              </md-option>
+            </md-select>
+          </md-input-container>
         </md-content>
-        <md-content flex  class="md-padding" id="container" style="font-size:{{currSize}}">
+        <md-content flex  class="md-padding" id="container"style="font-size:{{currSize}}">
           <!-- Content will be inserted by websocket connection -->
+
+          
         </md-content>
          <!-- The blinking cursor -->
-        <span class="blinking-cursor">|</span>
+        <span ng-hide="showCard" class="blinking-cursor ng-hide">|</span>
         <md-content class="md-padding">
           <div layout="row" ng-hide="!showCard" class="ng-hide">
             <md-content flex></md-content>
@@ -90,10 +93,8 @@
               <md-list-item class="md-3-line" id="filelist" ng-click="open_connection('<<.>>')">
                 <div class="md-list-item-text">
                   <<.>>
-                  
                 </div>
-               
-              </md-list-item> 
+              </md-list-item>
               <md-divider></md-divider>
               <<end>>
             </md-list>
@@ -112,36 +113,13 @@
   <script src="/js/ui-bootstrap-tpls.min.js"></script>
   <script src="/js/app.js"></script>
   <script src="/js/index.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  <!-- load web tail view of first file in directory -->
-  <script>
-  function eventFire(el, etype){
-    if (el.fireEvent) {
-      el.fireEvent('on' + etype);
-    } else {
-      var evObj = document.createEvent('Events');
-      evObj.initEvent(etype, true, true);
-      el.dispatchEvent(evObj);
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", function(){
-    eventFire(document.getElementById('open'), 'click');
-  });
-
-  
-  </script>
   <style type="text/css">
-   
+    .scrollLock{
+    position: fixed;
+    }
     md-sidenav, md-backdrop,  {
     position: fixed !important;
     }
   </style>
 </html>
 << end >>
- {# window.scrollTo(0,document.body.scrollHeight);
-        var autoScroll = window.setInterval(function() {
-    var $target = $('html,body'); 
-    $target.animate({scrollTop: $target.height()}, 1000);
-  }, 500); #}

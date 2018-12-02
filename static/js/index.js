@@ -23,7 +23,7 @@ function mainController($rootScope, $scope, $mdSidenav, $http) {
   }
 
   vm.fontSize = ["10px", "11px", "12px", "14px", "16px", "18px", "20px", "22px", "24px"]
-  $scope.currSize = vm.fontSize[3];
+  $scope.currSize = vm.fontSize[2];
 
   $scope.open_connection = function (file) {
     console.log(file)
@@ -52,17 +52,16 @@ function mainController($rootScope, $scope, $mdSidenav, $http) {
     // clear the contents
     container.html("")
     socket.onopen = function () {
-      container.append("<p><b>Tailing file: " +"//" + window.location.hostname + ":" + window.location.port + " " + file + "</b></p>");
-      title.append("Tailing file: " + file);
+      container.append("<p><b>Tailing file: " + file + "</b></p>");
     };
     socket.onmessage = function (e) {
       container.append(e.data.trim() + "<br>");
 
-       // On update of document scroll to bottom
-       window.scrollTo(0,document.body.scrollHeight);
+      // On update of document scroll to bottom
+      window.scrollTo(0, document.body.scrollHeight);
     }
     socket.onclose = function () {
-      container.append("<p>Websocket connection closed. Tail stopped</p>");
+      container.append("<p>Connection Closed to WebSocket, tail stopped</p>");
     }
     socket.onerror = function (e) {
       container.append("<b style='color:red'>Some error occurred " + e.data.trim() + "<b>");
