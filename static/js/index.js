@@ -61,7 +61,7 @@ function mainController($rootScope, $scope, $mdSidenav, $http) {
       window.scrollTo(0, document.body.scrollHeight);
     }
     socket.onclose = function () {
-      container.append("<p>Connection Closed to WebSocket, tail stopped</p>");
+      container.append("<p>Connection Closed to WebSocket, tail stopped.</p>");
     }
     socket.onerror = function (e) {
       container.append("<b style='color:red'>Some error occurred " + e.data.trim() + "<b>");
