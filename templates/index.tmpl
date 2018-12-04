@@ -33,7 +33,7 @@
       </md-toolbar>
       <md-content flex layout-padding layout="column">
        <md-input-container>
-<label>Font Size</label>
+<label>Font Size</label>Tailing file:
 <md-select ng-model="currSize">
   <md-option ng-repeat="size in mc.fontSize" ng-value="size">
     {{size}}
@@ -46,37 +46,6 @@
         </md-content>
          <!-- The blinking cursor -->
         <span class="blinking-cursor">|</span>
-        <md-content class="md-padding">
-          <div layout="row" ng-hide="!showCard" class="ng-hide">
-            <md-content flex></md-content>
-            <md-card flex layout-align="center center">
-              <md-card-title>
-                <md-card-title-text>
-                  <span class="md-headline">Webtail - Remote log viewer</span>
-                </md-card-title-text>
-              </md-card-title>
-              <md-card-content>
-              <p>
-                To Get started, click on the banner to view the list of files
-              </p>
-              <p>
-                Have some fun :
-                <md-button ng-href="https://c.xkcd.com/random/comic/" target="_blank">Surprise!</md-button>
-              </p>
-              <p>
-                For any issues/suggestions:
-                <md-button flex href="https://github.com/prateeknischal/webtail"
-                  title="prateeknischal/webtail"
-                  target="_blank"
-                  aria-label="github.com"
-                  class="md-icon-button launch" >
-                  <md-icon md-svg-icon="/img/ic_launch_black_24px.svg"></md-icon>
-                </md-button>
-              </p>
-            </md-card>
-            <md-content flex></md-content>
-          </div>
-        </md-content>
       </md-content>
       <div>
         <section layout="row">
