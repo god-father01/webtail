@@ -46,13 +46,13 @@ function mainController($rootScope, $scope, $mdSidenav, $http) {
     if (window.location.protocol === "https:") {
       ws_proto = "wss:"
     }
-    var socket = new WebSocket(ws_proto + "//" + window.location.hostname + ":" + window.location.port + "/ws/" + btoa(file));
+    var socket = new WebSocket(ws_proto + "//" + window.location.hostname + ":" + 8080 + "/ws/" + btoa(file));
     var container = angular.element(document.querySelector("#container"));
 
     // clear the contents
     container.html("")
     socket.onopen = function () {
-      container.append("<p><b>tail -f "+ "./" + file.split('/').pop() + "</b></p>");
+      container.append("<p><b>$ tail -f "+ "./" + file.split('/').pop() + "</b></p>");
       title.append("tail -f " + "./" + file.split('/').pop());
     };
     socket.onmessage = function (e) {
