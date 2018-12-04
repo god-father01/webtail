@@ -52,7 +52,7 @@ function mainController($rootScope, $scope, $mdSidenav, $http) {
     // clear the contents
     container.html("")
     socket.onopen = function () {
-      container.append("<p><b>tail -f " + "//" + window.location.hostname + ":" + window.location.port + " " + "./" + file.split('/').pop() + "</b></p>");
+      container.append("<p><b>tail -f "+ "./" + file.split('/').pop() + "</b></p>");
       title.append("tail -f " + "./" + file.split('/').pop());
     };
     socket.onmessage = function (e) {
